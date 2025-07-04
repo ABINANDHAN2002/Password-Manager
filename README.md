@@ -1,12 +1,55 @@
-# React + Vite
+# 🔐 Password Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and secure password manager built using **React.js**, with clean UI and password storage handled via browser **localStorage**. Manage your credentials for different platforms easily and safely.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔑 Add and manage password entries
+- 👁️ Toggle password visibility
+- 🗑️ Delete individual records
+- 💾 Data saved in localStorage (persists even after refresh)
+- ⚛️ Built with React components and state management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** (via Vite or Create React App)
+- HTML & CSS (or Tailwind CSS)
+- JavaScript (ES6+)
+- Browser **localStorage**
+
+---
+
+## 📂 Project Structure
+
+```bash
+password-manager/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   └── PasswordForm.jsx
+│   │   └── PasswordTable.jsx
+│   ├── App.jsx
+│   ├── index.js
+│   └── styles/
+│       └── app.css
+├── README.md
+├── package.json
+└── vite.config.js or config files
+```
+Installation
+git clone https://github.com/ABINANDHAN2002/Password-Manager.git
+
+cd Password-Manager
+
+npm install
+
+npm run dev
