@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CryptoJS from 'crypto-js';
+import './Passwordlist.css'; 
 
 function PasswordList({ passwords, deletePassword, secretKey, isUnlocked }) {
   const [showPasswords, setShowPasswords] = useState(false);
@@ -18,13 +19,12 @@ function PasswordList({ passwords, deletePassword, secretKey, isUnlocked }) {
 
   return (
     <div className="password-list">
-      <div style={{ marginBottom: '10px' }}>
+      <div className="show-passwords">
         <label>
           <input
             type="checkbox"
             checked={showPasswords}
             onChange={() => setShowPasswords(!showPasswords)}
-            style={{ marginRight: '5px' }}
           />
           Show Passwords
         </label>
@@ -33,18 +33,13 @@ function PasswordList({ passwords, deletePassword, secretKey, isUnlocked }) {
       {passwords.length === 0 ? (
         <p>No saved passwords yet.</p>
       ) : (
-        <ul style={{ listStyle: 'none', padding: 0 }}>
+        <ul>
           {passwords.map(({ id, website, username, password }) => (
-            <li key={id} style={{ marginBottom: '15px', padding: '10px', border: '1px solid #ccc', borderRadius: '6px' }}>
+            <li key={id}>
               <strong>{website}</strong><br />
               👤 {username} <br />
               🔑 {showPasswords ? decryptPassword(password) : '••••••••'} <br />
-              <button
-                onClick={() => deletePassword(id)}
-                style={{ marginTop: '5px', padding: '4px 8px', cursor: 'pointer' }}
-              >
-                Delete
-              </button>
+              <button onClick={() => deletePassword(id)}>Delete</button>
             </li>
           ))}
         </ul>
